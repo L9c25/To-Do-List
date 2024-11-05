@@ -9,7 +9,6 @@ toDoBtn.addEventListener('click', addToDo);
 toDoList.addEventListener('click', deletecheck);
 document.addEventListener("DOMContentLoaded", getTodos);
 
-// Funções;
 function addToDo(event) {
     // Evita que o formulário seja enviado / Evita o recarregamento da página;
     event.preventDefault();
@@ -24,7 +23,6 @@ function addToDo(event) {
             alert("Você Deve escrever algo!");
         } 
     else {
-        // newToDo.innerText = "hey";
         newToDo.innerText = toDoInput.value;
         newToDo.classList.add('todo-item');
         toDoDiv.appendChild(newToDo);
@@ -54,10 +52,7 @@ function addToDo(event) {
 
 
 function deletecheck(event){
-
-    // console.log(event.target);
     const item = event.target;
-
     // deletar
     if(item.classList[0] === 'delete-btn')
     {
@@ -97,7 +92,7 @@ function savelocal(todo){
 }
 
 function getTodos() {
-    // Verifica: se há item(s) lá;
+    // Verifica: se há item(s);
     let todos;
     if(localStorage.getItem('todos') === null) {
         todos = [];
@@ -132,10 +127,11 @@ function getTodos() {
         // Adiciona à lista;
         toDoList.appendChild(toDoDiv);
     });
+    // return console.log(todos);
 }
 
 function removeLocalTodos(todo){
-    // Verifica: se há item(s) lá;
+    // Verifica: se há item(s);
     let todos;
     if(localStorage.getItem('todos') === null) {
         todos = [];

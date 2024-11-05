@@ -18,11 +18,6 @@ body {
 
 }
 
-/* .darker {
-    background-image: linear-gradient(100deg, #001214, #001f29);
-    color: white;
-    transition: 0.3s linear;
-} */
 
 #header,
 #form,
@@ -157,15 +152,10 @@ form button {
 }
 
 .todo li {
-    padding: 7px;
-    /* word-wrap: break-word; */
-    /* flex-wrap: wrap; */
+    padding: 7px;   
     font-size: 20px;
     flex: 1;
-    /* To push the trash and the check button to the right */
     border-radius: 30px;
-
-    /* wraps the links */
     overflow-wrap: anywhere;
     min-width: 150px;
 }
